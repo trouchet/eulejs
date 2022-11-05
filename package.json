@@ -4,7 +4,8 @@
   "description": "Euler's diagrams are non-empty Venn's diagrams.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/web-needle/eulejs/issues"
   },
-  "homepage": "https://github.com/web-needle/eulejs#readme"
+  "homepage": "https://github.com/web-needle/eulejs#readme",
+  "devDependencies": {
+    "husky": "^8.0.1"
+  }
 }
