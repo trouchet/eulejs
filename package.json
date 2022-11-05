@@ -1,0 +1,24 @@
+{
+  "name": "eulejs",
+  "version": "0.0.1",
+  "description": "Euler's diagrams are non-empty Venn's diagrams.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-needle/eulejs.git"
+  },
+  "keywords": [
+    "euler",
+    "venn",
+    "diagram"
+  ],
+  "author": "brunolnetto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/web-needle/eulejs/issues"
+  },
+  "homepage": "https://github.com/web-needle/eulejs#readme"
+}
