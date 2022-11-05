@@ -1,8 +1,6 @@
 ![a night owl](https://raw.githubusercontent.com/web-needle/eulejs/main/images/eule_small.png)
 
-Euler\'s diagrams are non-empty Venn\'s diagrams. For further information about:
-
-Euler diagrams: read the wikipedia article <https://en.wikipedia.org/wiki/Euler_diagram>
+Euler\'s diagrams are non-empty Venn\'s diagrams. For further information, read the wikipedia article <https://en.wikipedia.org/wiki/Euler_diagram>
 
 Have fun!
 
