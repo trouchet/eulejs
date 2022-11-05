@@ -18,11 +18,10 @@ Features
 
 We create a NodeJS project with src `index.js` and following content:
 
-``` {.python}
-#!/usr/bin/env python
+``` {.javascript}
 import spread_euler from 'eulejs'
 
-diagram = spread_euler(
+const diagram = spread_euler(
     {
         'a': [1, 2, 3],
         'b': [2, 3, 4],
