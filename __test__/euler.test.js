@@ -1,8 +1,8 @@
 import _ from "lodash";
 
-import { spreadEuler } from "../eulejs";
+import euler from "../eulejs";
 
-describe("spreadEuler", () => {
+describe("euler", () => {
   beforeAll(() => {
     jest.spyOn(console, "error").mockImplementation(() => {});
     jest.spyOn(console, "warn").mockImplementation(() => {});
@@ -20,7 +20,7 @@ describe("spreadEuler", () => {
 
   it("should throw Typerror for ill-conditioned input", () => {
     function illConditionedInput() {
-      return spreadEuler("");
+      return euler("");
     }
 
     expect(illConditionedInput).toThrow(
@@ -30,19 +30,19 @@ describe("spreadEuler", () => {
 
   it("should throw Typerror for ill-conditioned input", () => {
     function illConditionedInput() {
-      return spreadEuler([]);
+      return euler([]);
     }
 
     expect(illConditionedInput).toThrow("There must at least ONE set!");
   });
 
   it("should warn once for duplicated set entries", () => {
-    spreadEuler({ a: [1, 1, 2] });
+    euler({ a: [1, 1, 2] });
     expect(console.warn).toHaveBeenCalledTimes(1);
   });
 
   it("should raise error once for duplicated set entries", () => {
-    spreadEuler({ a: [1, 1, 2] });
+    euler({ a: [1, 1, 2] });
     expect(console.warn).toHaveBeenCalledTimes(1);
   });
 
@@ -58,8 +58,8 @@ describe("spreadEuler", () => {
       "0,1,2": [2],
     };
 
-    expect(spreadEuler([list_1, list_2, list_3])).toEqual(result);
-    expect(spreadEuler([list_1, list_2, list_3])).toEqual(result);
+    expect(euler([list_1, list_2, list_3])).toEqual(result);
+    expect(euler([list_1, list_2, list_3])).toEqual(result);
   });
 
   it("should return a multiple set interactions - Sample 1", () => {
@@ -74,8 +74,8 @@ describe("spreadEuler", () => {
       "0,1,2": [2],
     };
 
-    expect(spreadEuler([list_1, list_2, list_3])).toEqual(result);
-    expect(spreadEuler([list_1, list_2, list_3])).toEqual(result);
+    expect(euler([list_1, list_2, list_3])).toEqual(result);
+    expect(euler([list_1, list_2, list_3])).toEqual(result);
   });
 
   it("should return a multiple set interactions - Sample 2", () => {
@@ -90,8 +90,8 @@ describe("spreadEuler", () => {
       "0,1,2": [2],
     };
 
-    expect(spreadEuler([list_1, list_2, list_3])).toEqual(result);
-    expect(spreadEuler([list_1, list_2, list_3])).toEqual(result);
+    expect(euler([list_1, list_2, list_3])).toEqual(result);
+    expect(euler([list_1, list_2, list_3])).toEqual(result);
   });
 
   it("should validate empty exclusivity from Euler Diagram", () => {
@@ -103,6 +103,6 @@ describe("spreadEuler", () => {
       "0,1": [4, 5, 6],
     };
 
-    expect(spreadEuler([list_1, list_2])).toEqual(result);
+    expect(euler([list_1, list_2])).toEqual(result);
   });
 });

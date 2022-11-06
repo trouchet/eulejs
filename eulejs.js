@@ -19,7 +19,7 @@ import { objectInit, objectReduce, unique } from "./utils.js";
  *   @return {Array} keys_elems
  */
 
-function* euler(sets) {
+function* eulerGenerator(sets) {
   // There are no sets
   if (
     sets.constructor !== {}.constructor &&
@@ -43,10 +43,11 @@ function* euler(sets) {
       (result, __, key) => {
         result[key] = unique(sets[key]);
         return result;
-      }, {},
+      },
+      {},
     );
   }
-  
+
   if (Object.values(sets).length === 0)
     throw new TypeError("There must at least ONE set!");
 
@@ -71,7 +72,7 @@ function* euler(sets) {
       .map((compl_set_key) => String(compl_set_key));
 
     if (compl_sets_keys.length !== 0 && sets[set_key].length !== 0) {
-      for (const comb_elements of euler(
+      for (const comb_elements of eulerGenerator(
         objectReduce(
           compl_sets_keys,
           (result, __, compl_set_key) => {
@@ -120,4 +121,6 @@ function* euler(sets) {
   }
 }
 
-export const spreadEuler = (lists) => Object.fromEntries([...euler(lists)]);
+export default function euler(sets) {
+  return Object.fromEntries([...eulerGenerator(sets)])
+};
