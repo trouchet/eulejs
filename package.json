@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test:run": "jest --collect-coverage --coverage",
-    "test:watch": "jest --watchAll --collect-coverage --coverage"
+    "test:watch": "jest --watchAll --collect-coverage --coverage",
+    "publish": "np --any-branch"
   },
   "repository": {
     "type": "git",
