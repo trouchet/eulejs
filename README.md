@@ -10,7 +10,7 @@ How to install
 We run the command on bash terminal:
 
 ``` {.bash}
-npm install --save eulejs
+npm i --save eulejs
 ```
 
 Features
