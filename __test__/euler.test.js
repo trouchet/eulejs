@@ -37,12 +37,12 @@ describe("spreadEuler", () => {
   });
 
   it("should warn once for duplicated set entries", () => {
-    spreadEuler({'a': [1, 1, 2]});
+    spreadEuler({ a: [1, 1, 2] });
     expect(console.warn).toHaveBeenCalledTimes(1);
   });
 
   it("should raise error once for duplicated set entries", () => {
-    spreadEuler({'a': [1, 1, 2]});
+    spreadEuler({ a: [1, 1, 2] });
     expect(console.warn).toHaveBeenCalledTimes(1);
   });
 
