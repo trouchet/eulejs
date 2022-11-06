@@ -13,24 +13,21 @@ We run the command on bash terminal:
 npm i --save eulejs
 ```
 
-Features
+Example
 ========
 
-We create a NodeJS project with src `index.js` and following content:
+We navigate to folder `examples/` and run the command `node example.js`.
 
-``` {.javascript}
-import euler from 'eulejs'
+```
+{    
+  d: [ 6 ],
+  'c,d': [ 5 ],
+  'a,b,c,d': [ 3 ],
+  'b,c': [ 4 ],
+  'a,b': [ 2 ],
+  a: [ 1 ]
+}
 
-const diagram = euler(
-    {
-        'a': [1, 2, 3],
-        'b': [2, 3, 4],
-        'c': [3, 4, 5],
-        'd': [3, 5, 6]
-    })
-
-# Euler dictionary: {'a,b': [2], 'b,c': [4], 'a,b,c,d': [3], 'c,d': [5], 'd': [6], 'a': [1]}
-console.log(diagram)
 ```
 
 License
