@@ -19,9 +19,9 @@ Features
 We create a NodeJS project with src `index.js` and following content:
 
 ``` {.javascript}
-import spread_euler from 'eulejs'
+import euler from 'eulejs'
 
-const diagram = spread_euler(
+const diagram = euler(
     {
         'a': [1, 2, 3],
         'b': [2, 3, 4],
