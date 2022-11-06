@@ -122,5 +122,5 @@ function* eulerGenerator(sets) {
 }
 
 export default function euler(sets) {
-  return Object.fromEntries([...eulerGenerator(sets)])
-};
+  return Object.fromEntries([...eulerGenerator(sets)]);
+}
