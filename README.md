@@ -16,7 +16,7 @@ npm i --save eulejs
 Example
 ========
 
-We navigate to folder `examples/` and run the command `node example.js`.
+We navigate to folder `examples/` and run the command `node example.js`. THe following output logs in console:
 
 ```
 {    
