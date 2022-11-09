@@ -116,6 +116,7 @@ function* eulerGenerator(sets) {
 
       if (sets[set_key].length !== 0) {
         yield [String(set_key), sets[set_key]];
+        sets[set_key] = [];
       }
     }
   }
