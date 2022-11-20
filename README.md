@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/npm/v/eulejs.svg)](https://www.npmjs.com/package/eulejs)
 [![codecov](https://codecov.io/gh/web-needle/eulejs/branch/main/graph/badge.svg)](https://app.codecov.io/gh/web-needle/eulejs)
-[![downloads](https://img.shields.io/npm/dw/eulejs)](https://www.npmjs.com/package/eulejs)
+[![downloads](https://img.shields.io/npm/dm/eulejs)](https://www.npmjs.com/package/eulejs)
 
 Euler\'s diagrams are non-empty Venn\'s diagrams. For further information, read following [wikipedia article](https://en.wikipedia.org/wiki/Euler_diagram). Have fun!
 
