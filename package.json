@@ -13,8 +13,8 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test:run": "jest --collect-coverage --coverage",
-    "test:watch": "jest --watchAll --collect-coverage --coverage",
+    "test:run": "jest --collect-coverage --coverage && coveralls < coverage/lcov.info",
+    "test:watch": "jest --watchAll --collect-coverage --coverage && coveralls < coverage/lcov.info",
     "release": "np --any-branch"
   },
   "repository": {
