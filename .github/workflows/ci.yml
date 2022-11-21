@@ -19,18 +19,12 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        test_number:
-          - 1
-          - 2
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
           version: 10.x
       - run: npm install
-      - run: make test-coverage-${{ matrix.test_number }}
       - name: Coveralls
         uses: coverallsapp/github-action@v1.1.0
         env:
