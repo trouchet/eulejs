@@ -32,30 +32,8 @@ jobs:
         run: npm ci
       - name: Run tests and collect coverage
         run: npm run test
-
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
-
-  finish-codecov: 
-    needs: test-codecov
-    runs-on: ${{ matrix.os }}
-    strategy:
-      max-parallel: 42
-      fail-fast: false
-      matrix:
-        os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
-        node-version: [16.x, 18.x, 19.x]
-        exclude:
-          - os: ubuntu-18.04
-            node-version: 18.x
-          - os: ubuntu-18.04
-            node-version: 19.x
-    steps:
-      - name: Coveralls Finished
-        uses: coverallsapp/github-action@v1.1.0
-        with:
-          github-token: ${{ secrets.github_token }}
-          parallel-finished: true
 
   test-coveralls:
     runs-on: ${{ matrix.os }}
@@ -69,7 +47,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 10.x
-      - run: npm ci
+      - run: npm install
       - run: npm run test
       - name: Coveralls
         uses: coverallsapp/github-action@v1.1.0
@@ -78,20 +56,11 @@ jobs:
         with:
           github-token: ${{ secrets.github_token }}
           parallel: true
-
-  finish-coveralls:
-    needs: test-coveralls
-    runs-on: ${{ matrix.os }}
-    strategy:
-      max-parallel: 42
-      fail-fast: false
-      matrix:
-        os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
-    steps:
       - name: Coveralls Finished
         uses: coverallsapp/github-action@v1.1.0
         with:
           github-token: ${{ secrets.github_token }}
           parallel-finished: true
+
 
   
