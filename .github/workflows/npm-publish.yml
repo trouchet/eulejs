@@ -19,9 +19,9 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
         exclude:
           - os: ubuntu-18.04
-            node-version: 16.x
-          - os: ubuntu-18.04
             node-version: 18.x
+          - os: ubuntu-18.04
+            node-version: 19.x
 
     steps:
       - uses: actions/checkout@v3
