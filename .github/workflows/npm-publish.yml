@@ -9,14 +9,24 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      max-parallel: 42
+      fail-fast: false
+      matrix:
+        os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
+        node-version: [16.x, 18.x, 19.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
       - run: npm ci
-      - run: npm test
+
 
   publish-npm:
     needs: build
