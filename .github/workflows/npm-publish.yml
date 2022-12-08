@@ -17,6 +17,11 @@ jobs:
         os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
         node-version: [16.x, 18.x, 19.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        exclude:
+          - os: ubuntu-18.04
+            node-version: 18.x
+          - os: ubuntu-18.04
+            node-version: 19.x
 
     steps:
       - uses: actions/checkout@v3
