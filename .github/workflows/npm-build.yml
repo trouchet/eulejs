@@ -18,6 +18,11 @@ jobs:
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
         node-version: [16.x, 18.x, 19.x]
+        exclude:
+          - os: ubuntu-18.04
+            version: 16.x
+          - os: ubuntu-18.04
+            version: 18.x
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
