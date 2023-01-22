@@ -74,11 +74,13 @@ function* eulerGenerator(sets) {
 
     if (compl_sets_keys.length !== 0 && sets[set_key].length !== 0) {
       compl_sets = objectReduce(
-          compl_sets_keys,
-          (result, __, compl_set_key) => {
-            result[compl_set_key] = sets[compl_set_key];
-            return result;
-          }, {},)
+        compl_sets_keys,
+        (result, __, compl_set_key) => {
+          result[compl_set_key] = sets[compl_set_key];
+          return result;
+        },
+        {},
+      );
 
       for (const comb_elements of eulerGenerator(compl_sets)) {
         comb_str = comb_elements[0];
