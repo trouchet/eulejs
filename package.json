@@ -1,7 +1,7 @@
 {
   "name": "eulejs",
   "description": "Euler's diagrams are non-empty Venn's diagrams.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "homepage": "https://github.com/web-needle/eulejs#readme",
   "bugs": {
