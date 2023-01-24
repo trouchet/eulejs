@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-import euler from "../eulejs";
+import euler from "../index";
 
 describe("euler", () => {
   beforeAll(() => {
