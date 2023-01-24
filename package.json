@@ -12,7 +12,7 @@
     "import": "./index.js",
     "require": "./index.js"
   },
-  "sc/ripts": {
+  "scripts": {
     "test": "jest",
     "prepare": "husky install",
     "format": "prettier --write .",
