@@ -1,4 +1,4 @@
-import euler from "../eulejs.js";
+import euler from "../index.js";
 
 const diagram = euler({
   a: [1, 2, 3],
