@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-import { objectInit, objectReduce, unique } from "./utils.js";
+import { objectReduce, unique } from "./utils.js";
 
 /**
  *   @abstract returns each tuple [key, elems] of the Euler diagram
@@ -19,7 +19,7 @@ import { objectInit, objectReduce, unique } from "./utils.js";
  *   @return {Array} keys_elems
  */
 
-function* eulerGenerator(sets) {
+export function* eulerGenerator(sets) {
   // There are no sets
   if (
     sets.constructor !== {}.constructor &&
@@ -124,6 +124,6 @@ function* eulerGenerator(sets) {
   }
 }
 
-export default function euler(sets) {
+export const euler_ = (sets) => {
   return Object.fromEntries([...eulerGenerator(sets)]);
 }

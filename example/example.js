@@ -1,6 +1,6 @@
-import euler from "../index.js";
+const eule = require("eulejs");
 
-const diagram = euler({
+const diagram = eule.euler({
   a: [1, 2, 3],
   b: [2, 3, 4],
   c: [3, 4, 5],
@@ -18,3 +18,4 @@ const diagram = euler({
  *	 }
  */
 console.log(diagram);
+ 

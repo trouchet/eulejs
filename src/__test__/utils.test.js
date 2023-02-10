@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-import { objectInit, objectReduce, unique } from "../utils";
+import { objectInit, objectReduce, unique } from "../utils.js";
 
 describe("objects", () => {
   it("should return reduced object by certain function", () => {
