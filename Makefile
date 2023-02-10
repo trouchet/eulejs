@@ -32,21 +32,27 @@ export PRINT_HELP_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 PACKAGE_VERSION := poetry version -s
 
-PACKAGE_NAME = "eule"
-COVERAGE_IGNORE_PATHS = "eule/examples"
+PACKAGE_NAME = "eulejs"
+COVERAGE_IGNORE_PATHS = "eulejs/examples"
 
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-clean: clean-test ## remove all test coverage
+clean: clean-test clean-dist ## remove all test coverage
 
 clean-test: ## remove test and coverage artifacts
 	rm -fr coverage/
 
-test: ## run tests with jest
+clean-dist: ## remove dist artifacts
+	rm -fr dist/
+
+build: clean-dist ## remove all test coverage
+	npm run build
+
+test: clean-test ## run tests with jest
 	npm run test:run
 
-test-watch: ## run tests on watchdog mode
+test-watch: clean-test  ## run tests on watchdog mode
 	npm run test:watch
 
 lint: clean ## perform inplace lint fixes
