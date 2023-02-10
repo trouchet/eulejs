@@ -126,4 +126,4 @@ export function* eulerGenerator(sets) {
 
 export const euler_ = (sets) => {
   return Object.fromEntries([...eulerGenerator(sets)]);
-}
+};

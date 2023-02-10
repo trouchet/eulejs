@@ -18,4 +18,3 @@ const diagram = eule.euler({
  *	 }
  */
 console.log(diagram);
- 
