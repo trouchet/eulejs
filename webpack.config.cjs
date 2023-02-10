@@ -1,13 +1,6 @@
 const path = require("path");
 
-module.exports = {
-  mode: "production",
-  entry: "./src/index.js",
-  output: {
-    path: path.resolve("dist"),
-    filename: "index.cjs",
-    libraryTarget: "commonjs2",
-  },
+const config = {
   module: {
     rules: [
       {
@@ -20,4 +13,26 @@ module.exports = {
   resolve: {
     extensions: [".js"],
   },
-};
+  externals: {
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_',
+    },
+  },
+}
+
+const requireConfig = Object.assign( {}, config,
+  {
+    mode: "production",
+    entry: "./src/index.js",
+    output: {
+      path: path.resolve("dist"),
+      filename: "index-require.cjs",
+      libraryTarget: "commonjs2"
+    },  
+  } 
+);
+
+module.exports = requireConfig;
