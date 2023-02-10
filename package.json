@@ -1,7 +1,7 @@
 {
   "name": "eulejs",
   "description": "Euler's diagrams are non-empty Venn's diagrams.",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "type": "module",
   "module": "src/index.js",
   "modules.root": "src",
@@ -9,7 +9,7 @@
   "bugs": {
     "url": "https://github.com/trouchet/eulejs/issues"
   },
-  "main": "dist/index-require.cjs",  
+  "main": "dist/index-require.cjs",
   "scripts": {
     "build": "webpack --mode production",
     "prepublish": "npm run build",
