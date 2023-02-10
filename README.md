@@ -23,7 +23,13 @@ npm i --save eulejs
 Example
 ========
 
-We navigate to folder `examples/` and run the command `node example.js`. The following output logs in console:
+We do: 
+
+1. Navigate to folder `example/`
+2. Run the command `npm i --save-dev eulejs`
+3. Run the command `npm start`. 
+
+The following output log appears in console:
 
 ```
 {    
