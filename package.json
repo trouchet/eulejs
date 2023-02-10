@@ -2,7 +2,7 @@
   "name": "eulejs",
   "description": "Euler's diagrams are non-empty Venn's diagrams.",
   "version": "2.0.1",
-  "type": "commonjs",
+  "type": "module",
   "homepage": "https://github.com/trouchet/eulejs#readme",
   "bugs": {
     "url": "https://github.com/trouchet/eulejs/issues"
