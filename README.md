@@ -26,7 +26,7 @@ Example
 We do: 
 
 1. Navigate to folder `example/`
-2. Run the command `npm i --save-dev eulejs`
+2. Run the command `npm i --save eulejs`
 3. Run the command `npm start`. 
 
 The following output log appears in console:
