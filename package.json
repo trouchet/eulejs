@@ -44,7 +44,7 @@
     "jest-environment-jsdom": "^29.4.2",
     "js-beautify": "^1.14.7",
     "np": "^8.0.0",
-    "prettier": "^2.8.3",
+    "prettier": "^3.0.0",
     "ts-jest": "^29.0.5",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
