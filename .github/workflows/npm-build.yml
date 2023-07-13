@@ -16,15 +16,10 @@ jobs:
       max-parallel: 42
       fail-fast: false
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
+        os: [ubuntu-20.04, macos-latest, windows-latest]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
         node-version: [16.x, 18.x, 19.x]
-        exclude:
-          - os: ubuntu-18.04
-            node-version: 18.x
-          - os: ubuntu-18.04
-            node-version: 19.x
-
+    
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
