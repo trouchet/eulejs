@@ -25,9 +25,8 @@ Example
 
 We do: 
 
-1. Navigate to folder `example/`
-2. Run the command `npm i --save eulejs`
-3. Run the command `npm start`. 
+1. Navigate to folder `example/commonjs` OR `example/esmodule`
+2. Run the command `npm install && npm start`
 
 The following output log appears in console:
 
